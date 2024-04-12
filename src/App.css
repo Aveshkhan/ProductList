@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.SideBar {
+  background: linear-gradient(180deg, rgb(62.91, 72.41, 81.91) 0%, rgb(3.79, 2.94, 3.5) 100%);
+  width: 86px;
   min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sideMenu {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menue img {
+  height: 25px;
+  cursor: pointer;
+}
+
+.menue img:hover {
+  opacity: 0.9;
+}
+
+.menuBar {
+  display: flex;
+}
+
+.rightMenu {
+  width: 100%;
+  background-color: #F3F4F6;
+}
+
+.topBar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  background-color: #FFFFFF;
+}
+
+.topLeft h3 {
+  color: #8d7855;
+  font-size: 32px;
+  font-weight: 700;
+  height: 38px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.UserTab {
+  display: flex;
+  align-items: center;
+  background-color: #F3F4F6;
+  border-radius: 8px;
+  gap: 10px;
+  overflow: hidden;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.customTabs {
+  display: flex;
+  align-items: center;
+}
+
+.customTabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.customTab {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid;
+  border-color: #D0C2AA;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
+  height: 48px;
+  width: 100%;
+  max-width: 250px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px 16px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+  color: #424242;
+  cursor: pointer;
+}
+
+.customTab:hover {
+  background-color: #f8f8f8;
+}
+
+.searchInput input {
+  border: none;
+  background-color: #F3F4F6;
+  outline: none;
+  width: 100%;
+  color: #424242;
+}
+
+.searchBar label {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: left;
+}
+
+.searchInput {
+  border: 1px solid #9CA3AF;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 300px;
+  height: 40px;
+}
+
+.tableLeft {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tableTop {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.tableRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.customTable {
+  display: flex;
+  align-items: self-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tableLeft {
+  width: 100%;
+}
+
+.filterActive .tableLeft {
+  width: 78% !important;
+}
+
+.filterTab {
+  min-width: 240px;
+  width: 20%;
+  display: none;
+  height: 770px;
+}
+
+.filterActive .filterTab {
+  display: flex;
+}
+
+.filterTab .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tableWidth {
+  min-width: 152px !important;
+}
+
+.srNo {
+  width: 180px !important;
+}
+
+.table>thead>tr>th {
+  background-color: #F6F3EF;
+  color: #1F2937;
+}
+
+.table>thead>tr>th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.table>thead>tr>th:last-child {
+  border-top-right-radius: 5px;
+}
+
+
+/* ========= pagination  =============== */
+
+
+.pagination {
+  background-color: #fff;
+  width: 100%;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.paginationBtn {
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  text-align: left;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.paginationBtn.active {
+  background-color: #6B7280;
+  color: #fff;
+}
+
+.paginationBtn:hover{
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+/* ========= scroll bar css  =============== */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
+
+/* ===================   Media Querry  ==================== */
+
+
+
+@media (max-width: 1399.98px) {
+  .filterActive .tableLeft {
+    width: 77% !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .customTab {
+    font-size: 14px;
+    padding: 10px 12px;
   }
 }
+
+@media (max-width: 1199.98px) {
+  .filterActive .tableLeft {
+    width: 75% !important;
+  }
+
+  .filterActive .customTab {
+    font-size: 13px;
+    padding: 10px 8px;
+    font-weight: 500;
+  }
+
+  .customTabs {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 1099.98px) {
+  .filterActive .tableLeft {
+    width: 72% !important;
+  }
+
+  .filterActive .customTab {
+    font-size: 12px;
+    padding: 10px 8px;
+    font-weight: 500;
+  }
+
+  .filterActive .customTab {
+    max-width: max-content;
+  }
+
+  .searchInput {
+    width: 240px;
+  }
+}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 575.98px) {}
